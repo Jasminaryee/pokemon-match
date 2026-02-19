@@ -21,8 +21,8 @@ The application was created using HTML, CSS, and JavaScript and runs entirely in
 3. Mobile layout refinements
 
 ### Images
+<img width="1307" height="921" alt="Screenshot 2026-02-19 144633" src="https://github.com/user-attachments/assets/a8d8e9d5-6cec-45e3-8f8c-5033e746392d" />
 <img width="1360" height="924" alt="Screenshot 2026-02-19 144529" src="https://github.com/user-attachments/assets/63684891-e275-450d-8a38-a3f49067597b" />
-<img width="1907" height="921" alt="Screenshot 2026-02-19 144633" src="https://github.com/user-attachments/assets/a8d8e9d5-6cec-45e3-8f8c-5033e746392d" />
 <img width="1222" height="928" alt="Screenshot 2026-02-19 144610" src="https://github.com/user-attachments/assets/6604f8b9-bdbc-4b0c-bf01-06adf42994e7" />
 
 ### Author
