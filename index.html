@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- Javascript assignment 14/02/2025
+ Jasmin Aryee 400601132
+ My game is a simple memorization game it start swith a grid of 16 (4x4) images
+ Two of the images are the same, the player must click the tile to reveal the image
+ the player must match the two images
+-->
+
+
+<html>
+    <head>
+        <title>Match The Tile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src = "js/matchingGame.js"></script>
+        <link rel = "stylesheet" href = "css/matchingGame.css">
+    </head>
+
+    <body>
+        <div id = "header">
+            <img src = "images/help_icon.png" id = "help"><p>help</p>
+            <h2>Find The Match Game</h2>
+        </div>
+
+        <!-- help/instructions -->
+        <div id = "instructions">
+                <p>Welcome to Match the Tile!<br>
+                Test your memory and speed in this fun tile-matching game.<br>
+                <br>
+                How to Play:<br>
+                <br>
+                Choose Your Difficulty:<br>
+                Easy: 12 images<br>
+                Medium: 16 images (Coming soon)<br>
+                Select Number of Rounds<br>
+                <br>
+                Flipping Tiles:<br>
+                Click a tile to flip it over.<br>
+                Click another tile to find its match.<br>
+                If they match, they stay revealed.<br>
+                If not, the tiles flip back over<br>
+                <br>
+                Win the Round:<br>
+                Match all pairs!<br>
+                Progress through rounds to increase your score. The more rounds you choose the higher the score!</p>
+        </div>
+        <!-- The form part of the game -->
+        <div id = "sorry">
+        <p>Medium has not been implemented yet!</p>
+        </div>
+        <div id="form">
+            <h1>Game Options</h1>
+
+            
+            <input id="username" type="text" placeholder="Enter your name" autocomplete="on">
+            <p id = "username_warning" class="warning">You cannot leave this field empty</p>
+
+            
+            <select id="difficulty">
+                <option>Easy</option>
+                <option>Medium</option>
+            </select>
+
+            <!-- source: poffessor sam scott -->
+            <input id="rounds" type="number" min="1" max = "3" placeholder="Number of rounds">
+            <p id ="rounds_warning" class="warning">You cannot leave this field empty</p>
+            <p> choose your favourite colour</p>
+
+            <input id="colorbox" type="color" value="#B7ADE6">
+            <input id="submitbutton" type="button" value="Start" disabled>
+            <!-- end source -->
+
+        </div>
+        <!-- Easy version of the game 3x4 -->
+    <div id ="easy_mode">
+        <div id = "game_easy">
+            <div id = "grid">
+                <div id="column">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile1" class = "hidden">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile2" class = "hidden" >
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile3" class = "hidden">
+                </div>
+                <div id="column">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile4" class = "hidden">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile5" class = "hidden">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile6" class = "hidden">
+                </div>
+                <div id="column">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile7" class = "hidden">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile8" class = "hidden">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile9" class = "hidden">
+                </div>
+                <div id="column">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile10" class = "hidden">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile11" class = "hidden">
+                    <img src = "images/card_hidden.jpg" id = "hidden_tile12" class = "hidden">
+                </div>
+            </div>
+        </div>
+        <!-- revealed images for game easy -->
+        <div id = "easy_hidden">
+            <div id = "grid">
+                <div id="column1">
+                    <img src = "" id ="tile1">
+                    <img src = "" id ="tile2">
+                    <img src = "" id ="tile3">
+                </div>
+                <div id="column2">
+                    <img src = "" id ="tile4">
+                    <img src = "" id ="tile5">
+                    <img src = "" id ="tile6">
+                </div>
+                <div id="column3">
+                    <img src = "" id ="tile7">
+                    <img src = "" id ="tile8">
+                    <img src = "" id ="tile9">
+                </div>
+                <div id="column4">
+                    <img src = "" id ="tile10">
+                    <img src = "" id ="tile11">
+                    <img src = "" id ="tile12">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end of easy -->
+
+        <!-- Medium version of game 4x4 -->
+    <div id = "game_medium">
+        <div id = "grid">
+            <div id="column1">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+            </div>
+
+            <div id="column2">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+            </div>
+
+            <div id="column3">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+            </div>
+
+            <div id="column4">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+                <img src = "images/card_hidden.jpg">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id = "scoreboard">
+        <h3>GAME STATS</h3>
+        <p id ="round">ROUND: 1</p>
+        <p id = "score">SCORE: 0</p>
+    </div>
+
+    <div id = "game_over">
+        <h3>GAME OVER</h3>
+        <p id ="goodjob">Good job!</p>
+        <p id = "final_score">FINAL SCORE: 0</p>
+        <br>
+        <p>Do you want to play again?</p>
+        <div id ="choice">
+            <input id="yes" type="button" value="Yes!">
+            <input id="no" type="button" value="No">
+        </div>
+        <p id ="thankyou">Thank you for playing!</p>
+
+    </div>
+
+    </body>
+    
+    </html>

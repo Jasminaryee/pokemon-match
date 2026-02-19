@@ -1,0 +1,174 @@
+/* Jasmin Aryee 400601132
+ 20th Feb 2025
+ CSS for game matching */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+body{
+    background-color: rgb(255, 230, 253);
+}
+#header{
+    margin-top:0;
+    padding:20px;
+    background-color: rgb(175, 173, 230);
+}
+#instructions{
+    margin:10px;
+    padding:10px;
+    background-color: rgb(60, 43, 136);
+    border-radius: 20px;
+}
+
+#instructions p{
+    text-align: left;
+    color:aliceblue
+}
+/* form css */
+#sorry{
+    max-width:200px;
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-color: rgb(255, 196, 48);
+}
+#form {
+    background-color: rgb(183, 173, 230);
+    border-radius: 20px;
+    max-width: 550px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+input[type=color] {
+    height: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    padding:5px;
+    border-radius: 15px;;
+}
+#header img{
+    padding:0;
+    width:30px;
+}
+
+/* styles option box and input boxes */
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    margin:auto;
+    margin-top: 10px;
+}
+#difficulty, #rounds  {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    margin:auto;
+    margin-top: 10px; 
+
+}
+
+.warning {
+    color: rgb(255, 0, 0);
+    display: none;
+}
+
+/* end of form css */
+
+/* main game css (easy) */
+#easy_mode {
+    background-color: rgb(216, 173, 230);
+    border-radius: 30px;
+
+    position: relative; /* Acts as a reference for absolute positioning */
+    max-width: 400px;
+    margin: auto;
+}
+#game_easy {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;  /* Ensures it fully covers #easy_hidden */
+    height: 100%;
+    z-index:2;
+
+
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    margin-bottom: 20px;
+
+
+
+}
+#easy_hidden {
+    position:relative;
+    z-index:1;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+#grid{
+    display: flex;
+}
+#grid img{
+    width: 100%;
+
+}
+
+#game_medium {
+    background-color: rgb(95, 32, 115);
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    max-width:550px;
+    margin-bottom: 20px;
+
+}
+
+
+/* Scoreboard */
+#scoreboard{
+    text-align: center;
+    background-color: rgb(75, 218, 70);
+    max-width: 400px;
+    border-radius: 30px;
+    margin: auto;
+}
+
+#game_over{
+    max-width: 400px;
+    margin:auto;
+    border-radius:30px;
+    background-color:red;
+    padding-bottom:10px;
+}
+
+#yes, #no{
+    display:inline-block;
+    font-size:15px;
+    width:100px;
+    height:50px;
+}
+
+#game_over{
+    margin-top:30px;
+}
